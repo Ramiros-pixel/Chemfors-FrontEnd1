@@ -28,7 +28,7 @@ const Calculate = () => {
       formData.append('entalpi', entalpi);
       formData.append('massa', massa);
       
-      const response = await axios.post('http://127.0.0.1:5000/data', formData, {
+      await axios.post('http://127.0.0.1:5000/data', formData, {
         withCredentials: false,
         headers: {
           'Authorization': `Bearer ${token}`,

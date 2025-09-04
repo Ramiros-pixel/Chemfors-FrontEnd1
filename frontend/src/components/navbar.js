@@ -24,43 +24,43 @@ const Navbar = () => {
       borderBottom: '1px solid #fff'
     }}>
       <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
+        <div className="navbar-item">
           <img src={ChemforsLogo} width="28" height="28" alt="ChemFors Logo"/>
-        </a>
+        </div>
     
-        <a role="button" className={`navbar-burger burger ${isActive ? 'is-active' : ''}`} aria-label="menu" aria-expanded="false" onClick={() => setIsActive(!isActive)}>
+        <button role="button" className={`navbar-burger burger ${isActive ? 'is-active' : ''}`} aria-label="menu" aria-expanded="false" onClick={() => setIsActive(!isActive)}>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </button>
       </div>
     
       <div id="navbarBasicExample" className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className="navbar-start">
-          <a className="navbar-item has-text-primary" onClick={() => {navigate('/dashboard'); setIsActive(false);}} style={{cursor: 'pointer'}}>
+          <button className="navbar-item has-text-primary" onClick={() => {navigate('/dashboard'); setIsActive(false);}} style={{cursor: 'pointer', background: 'none', border: 'none'}}>
             Home
-          </a>
+          </button>
 
-          <a className="navbar-item has-text-primary" onClick={() => {navigate('/calculate'); setIsActive(false);}} style={{cursor: 'pointer'}}>
+          <button className="navbar-item has-text-primary" onClick={() => {navigate('/calculate'); setIsActive(false);}} style={{cursor: 'pointer', background: 'none', border: 'none'}}>
             Calculate
-          </a>
+          </button>
 
-          <a className="navbar-item has-text-primary" onClick={() => {navigate('/documentation'); setIsActive(false);}} style={{cursor: 'pointer'}}>
+          <button className="navbar-item has-text-primary" onClick={() => {navigate('/documentation'); setIsActive(false);}} style={{cursor: 'pointer', background: 'none', border: 'none'}}>
             Documentation
-          </a>
+          </button>
 
           <div className="navbar-item has-dropdown is-hoverable has-text-primary">
-            <a className="navbar-link has-text-primary">
+            <button className="navbar-link has-text-primary" style={{background: 'none', border: 'none'}}>
               More
-            </a>
+            </button>
 
             <div className="navbar-dropdown has-text-primary">
-              <a className="navbar-item" onClick={() => {navigate('/account'); setIsActive(false);}} style={{cursor: 'pointer'}}>
+              <button className="navbar-item" onClick={() => {navigate('/account'); setIsActive(false);}} style={{cursor: 'pointer', background: 'none', border: 'none'}}>
                 Account
-              </a>
-              <a className="navbar-item" onClick={() => {navigate('/history'); setIsActive(false);}} style={{cursor: 'pointer'}}>
+              </button>
+              <button className="navbar-item" onClick={() => {navigate('/history'); setIsActive(false);}} style={{cursor: 'pointer', background: 'none', border: 'none'}}>
                 History chart
-              </a>
+              </button>
             </div>
           </div>
         </div>

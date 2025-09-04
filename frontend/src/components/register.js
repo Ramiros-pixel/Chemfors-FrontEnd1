@@ -9,7 +9,7 @@ const Register = () => {
     const [alamat, setAlamat] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate();
-    const [msg,setmsg] = useState('')
+    const [msg] = useState('')
     
     const handleRegister = async(e) =>{
         e.preventDefault();
