@@ -3,23 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "axios": "^1.6.0",
-    "bulma": "^1.0.4",
-    "chart.js": "^4.5.0",
-    "react": "^18.3.1",
-    "react-chartjs-2": "^5.3.0",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.8.0",
-    "react-scripts": "^5.0.1",
-    "recharts": "^3.1.2"
-  },
-  "devDependencies": {
-    "serve": "^14.2.0"
+    "serve": "^14.2.4"
   },
   "scripts": {
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "postinstall": "npm run build"
+    "build": "cd frontend && npm install && npm run build",
+    "start": "serve -s frontend/build"
   },
   "engines": {
     "node": "18"
