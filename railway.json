@@ -2,6 +2,6 @@
   "build": {
     "builder": "NIXPACKS",
     "buildCommand": "cd frontend && npm install && CI=false npm run build",
-    "startCommand": "npx serve -s frontend/build -l 8080"
+    "startCommand": "npx serve -s frontend/build -l 8080 -H 0.0.0.0"
   }
 }
