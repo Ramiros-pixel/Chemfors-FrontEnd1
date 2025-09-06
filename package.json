@@ -10,6 +10,6 @@
     "start": "serve -s frontend/build -l 8080"
   },
   "engines": {
-    "node": "18"
-  }
+  "node": "20.x"
+}
 }
