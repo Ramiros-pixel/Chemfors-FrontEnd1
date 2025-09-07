@@ -28,13 +28,14 @@ const Calculate = () => {
       formData.append('entalpi', entalpi);
       formData.append('massa', massa);
       
-      await axios.post('web-production-939b.up.railway.app/data', formData, {
-        withCredentials: false,
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'multipart/form-data'
-        }
-      });
+      await axios.post('https://web-production-939b.up.railway.app/data', formData, {
+  withCredentials: false,
+  headers: {
+    'Authorization': `Bearer ${token}`,
+    'Content-Type': 'multipart/form-data'
+  }
+});
+
       
       setMsg('Data berhasil disimpan');
       setPosisi('');
