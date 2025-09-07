@@ -17,12 +17,16 @@ const Login = () => {
             formData.append('email', email);
             formData.append('password', password);
             
-            const response = await axios.post("https://web-production-939b.up.railway.app/login", formData, {
-                withCredentials: false,
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            });
+const response = await axios.post(
+  `${process.env.REACT_APP_API_URL}/login`,
+  formData,
+  {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  }
+);
+
             
             setToken(response.data.data.access_token);
             console.log('Login successful:', response.data);
